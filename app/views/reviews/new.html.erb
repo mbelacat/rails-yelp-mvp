@@ -1,0 +1,21 @@
+new.html.erb
+<h1>New Reviews</h1>
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+    <%= simple_form_for [Restaurant.find(params[:restaurant_id]), @review] do |f| %>
+
+      <%= f.input :content %>
+      <%= f.input :rating %>
+
+      <%= f.submit "add a review", class: "btn btn-primary" %>
+
+    <% end %>
+    </div>
+  </div>
+</div>
+
+
